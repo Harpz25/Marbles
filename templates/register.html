@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+
+{% block body %}
+    <div class="content" >
+    <h2>Register &#128209;</h2>
+
+    <form class = "form-control" action = "/register" method = "post">
+    <div>
+     <label for:"username"  >Username:</label> <input autocomplete = "off" name = "username" type = "text" placeholder = "Username">
+    </div>
+
+    <div>
+     <label for:"email"  >Email:</label> <input autocomplete = "off" name = "email" type = "email" placeholder = "Email">
+    </div>
+
+
+    <!--pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" title="Must be atleast 8 characters long inclusive of number,uppercase letter and lowercase letter"-->
+    <div>
+     <label for:"password"  >Password: </label> <input autocomplete = "off" name = "password" type = "text" placeholder = "Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" title="Must be atleast 8 characters long inclusive of number,uppercase letter and lowercase letter">
+    </div>
+
+    <div>
+    <label for:"confirmation"   >Confirm Password:</label>  <input autocomplete="off" name = "confirmation"  type= "text"  placeholder= "Confirm Password" >
+    </div>
+
+    <button class = "submit_btn" type = "submit">SUBMIT</button>
+    </form>
+    </div>
+{% endblock %}

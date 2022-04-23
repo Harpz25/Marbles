@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block title %}
+     Profile
+{% endblock %}
+
+{% block body %}
+    <div class = "content">
+     <h2>Profile &#128204;</h2>
+     <form class="select-group" action= "/profile" method = "post">
+
+
+     <div>
+         <label for = "physical_health">How satisfied are you with your ability to perform daily activities in life?</label>
+         <select name = "physical_health" id = "physical_health">
+           <option disabled selected value = ""> </option>
+           <option value = "1">Very dissatisfied</option>
+           <option value = "2">Dissatisfied</option>
+           <option value = "3">Neither satisfied nor dissatisfied</option>
+           <option value = "4">Satisfied</option>
+           <option value = "5">Very satisfied</option>
+         </select>
+     </div>
+
+    <div>
+         <label for = "psychological">How much do you enjoy your life?</label>
+         <select name = "psychological" id = "psychological">
+           <option disabled selected value = ""> </option>
+           <option value = "1">Not at all</option>
+           <option value = "2">A little</option>
+           <option value = "3">A moderate amount</option>
+           <option value = "4">Vey much</option>
+           <option value = "5">An extreme amount</option>
+         </select>
+     </div>
+
+    <div>
+         <label for = "social_relationship">How satisfied are you with your personal relationship?</label>
+         <select name = "social_relationship" id = "social_relationship">
+           <option disabled selected value = ""> </option>
+           <option value = "1">Very dissatisfied</option>
+           <option value = "2">Dissatisfied</option>
+           <option value = "3">Neither satisfied nor dissatisfied</option>
+           <option value = "4">Satisfied</option>
+           <option value = "5">Very satisfied</option>
+         </select>
+     </div>
+
+    <div>
+         <label for = "environment">How satisfied are you with your living condition?</label>
+         <select name = "environment" id = "environment">
+           <option disabled selected value = ""> </option>
+           <option value = "1">Very dissatisfied</option>
+           <option value = "2">Dissatisfied</option>
+           <option value = "3">Neither satisfied nor dissatisfied</option>
+           <option value = "4">Satisfied</option>
+           <option value = "5">Very satisfied</option>
+         </select>
+     </div>
+
+
+    <div>
+         <label for = "cope">How well are you coping with your problems?</label>
+         <select name = "cope" id = cope>
+         <option disabled selected value = ""> </option>
+           <option value = "1">Very poor</option>
+           <option value = "2">Poor</option>
+           <option value = "3">Fair</option>
+           <option value = "4">Good</option>
+           <option value = "5">Very good</option>
+         </select>
+    </div>
+
+     <div>
+         <label for = "primary_problem">What is the primary problem that you are currently facing in your life?</label>
+         <select name = "primary_problem" id = "primary_problem">
+           <option disabled selected value = ""></option>
+           <option value = "failure">Failure</option>
+           <option value = "family">Family</option>
+           <option value = "financial">Financial</option>
+           <option value = "grief">Grief</option>
+           <option value = "health">Health</option>
+           <option value = "job">Job</option>
+           <option value = "relationship">Relationship</option>
+         </select>
+     </div>
+
+     <button class = "submit_btn" type = "submit">SAVE</button>
+     </form>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+

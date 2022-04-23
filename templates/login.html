@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block body %}
+   <div class="content">
+    <h2>Login &#128273;</h2>
+
+    <form class = "form-control" action = "/login" method = "post">
+    <div>
+        <img src = "/static/avatar_pic.png" alt = "Avatar picture" class = "avatar_pic">
+    </div>
+    <div >
+       Username:<input autocomplete = "off" name = "username" type = "text" placeholder = "Username">
+    </div>
+    <div>
+       Password:<input autocomplete = "off" name = "password" type = "password" placeholder = "Password">
+    </div>
+    <button class = "submit_btn" type = "submit">LOGIN</button>
+    </form>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <style>
+        /*Most web-based email providers doesn't support css therefore internal style sheet is used instead*/
+        /*Most web-based email providers have different default font sizes thus pixel is used as measurement unit*/
+          html{background: url(static/marbles.jpg) no-repeat center fixed;background-size: cover;}
+
+          table{font-family:Arial,sans-serif;margin:16px 32px;text-align:center;padding:16px;border-style:solid;border-color:#00FFFF;}
+
+          h{margin-left:640px;padding:4px;font-size:24px;font-weight:bold;border-style:solid;border-color:#808080;border-radius:0.5rem;}
+
+          td{width:33%;height:160px;border:0.1rem solid black;padding:1.6px;border-radius:0.5rem;}
+
+          .index img{max-height:80px;width: 80px;}
+
+          th{padding:32px 0px 1.6px;font-size: 24px;}
+
+          a{display:inline;}
+
+          caption{margin-bottom:16px;text-decoration:underline overline;text-decoration-color:#c0c0c0;}
+
+    </style>
+    <title>Newsletter</title>
+</head>
+<body>     
+      <h>NEWSLETTER &#128478;</h>
+      <table class = "index">
+          <caption>Latest Buzz on Your Bulletin Board!</caption>
+          <thead>
+              <tr>
+                  <th colspan = "3">DO'S &#8681;</th>
+              </tr>
+          </thead>
+          <tbody >
+              {% for i in range(1)%}
+              <tr>
+                  <td><img src= {{do_dict[0].image}} alt = {{do_dict[0].title}} ></img><a href = {{do_dict[0].link}}>{{do_dict[0].title}}</a></td>
+                  <td><img src= {{do_dict[1].image}} alt = {{do_dict[1].title}} ></img><a href = {{do_dict[1].link}}>{{do_dict[1].title}}</a></td>
+                  <td><img src= {{do_dict[2].image}} alt = {{do_dict[2].title}} ></img><a href = {{do_dict[2].link}}}>{{do_dict[2].title}}</a></td>
+              </tr>
+              {% endfor %}
+          </tbody>
+          <thead>
+              <tr>
+                  <th colspan = "3">DON'TS &#8681;</th>
+              </tr>
+          </thead>
+          <tbody >
+              {% for i in range(1)%}
+              <tr>
+                  <td><img src= {{dont_dict[0].image}} alt = {{dont_dict[0].title}} ></img><a href = {{dont_dict[0].link}}>{{dont_dict[0].title}}</a></td>
+                  <td><img src= {{dont_dict[1].image}} alt = {{dont_dict[1].title}} ></img><a href = {{dont_dict[1].link}}>{{dont_dict[1].title}}</a></td>
+                  <td><img src= {{dont_dict[2].image}} alt = {{dont_dict[2].title}} ></img><a href = {{dont_dict[2].link}}}>{{dont_dict[2].title}}</a></td>
+              </tr>
+              {% endfor %}
+          </tbody>
+          <thead>
+              <tr>
+                  <th colspan = "3">EVENTS &#8681;</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for i in range(1)%}
+              <tr>
+                  <td><img src= {{event_dict[0].image}} alt = {{event_dict[0].title}} ></img><a href = {{event_dict[0].link}}>{{event_dict[0].title}}</a></td>
+                  <td><img src= {{event_dict[1].image}} alt = {{event_dict[1].title}} ></img><a href = {{event_dict[1].link}}>{{event_dict[1].title}}</a></td>
+                  <td><img src= {{event_dict[2].image}} alt = {{event_dict[2].title}} ></img><a href = {{event_dict[2].link}}}>{{event_dict[2].title}}</a></td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+     </body>
+</html>

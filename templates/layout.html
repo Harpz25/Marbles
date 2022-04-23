@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{% block title %}{% endblock %} \ Your Marbles</title>
+        
+        <script  src = "/static/apology.js" type ="text/javascript"></script>
+    
+        <link href="/static/marbles.ico" rel ="icon">
+
+        <link href="/static/styles.css" rel ="stylesheet">
+       
+    </head>
+    <body>
+        <!--start header-->
+        <div class = "header">
+           <img src="static/marbles_logo.png" id="pic_logo" alt="marbles"> 
+           <h1 id = "logo">MARBLES</h1>
+
+            <!--navigation- bar-->
+             <nav class="navigation" id="navigation bar">
+                {% if session.user_id %}
+                    <ul>
+                        <li class="nav-bar"><a href="/profile">Profile</a></li>
+                        <li class="nav-bar"><a href="/privacy">Privacy</a></li>
+                        <li class="nav-bar"><a href="/logout">Log Out</a></li>
+                    </ul>                
+                 {% else %}
+                    <ul>
+                        <li class="nav-bar"><a href="/register">Register</a></li>
+                        <li class="nav-bar"><a href="/login">Log In</a></li>   
+                    </ul>
+                {% endif %}
+             </nav>
+
+        </div>
+        <!-- end header-->
+
+          <!--content-box-->
+
+          <div class = "container" >
+
+
+                 {% block body %} {% endblock %}
+
+
+         </div>
+         <div class="footer">
+            <p>Marbles | Your Mental Health Matters</p>
+           </div>
+    </body>
+</html>

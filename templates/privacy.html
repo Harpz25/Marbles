@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Privacy
+{% endblock %}
+
+{% block body %}
+   <div class = "content">
+   <h2>Privacy &#128271;</h2>
+   <p>Username : {{users[0].username}}</p>
+
+
+   <form class="form-control" action = "/privacy" method = "post">            
+
+    <h3>Change Password</h3>
+    <div>
+    <label for:"password"  >New Password: </label> <input autocomplete = "off" name = "password" type = "text" placeholder = "Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" title="Must be atleast 8 characters long inclusive of number,uppercase letter and lowercase letter"> 
+    </div> 
+    
+    <div>
+    <label for:"confirmation"   >Confirm New Password:</label>  <input autocomplete="off" name = "confirmation"  type= "text"  placeholder= "Confirm Password" >
+    </div>
+    <button class = "submit_btn" type = "submit" >SAVE</button>
+   </form>
+   </div>
+
+
+
+
+{% endblock %}
+
+

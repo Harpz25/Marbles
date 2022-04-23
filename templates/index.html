@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block body %}
+      <div class="content">
+      <h2>Homepage &#127968;</h2>
+
+      <table class="index">
+          <caption>Click refresh for the latest updates on your Bulletin Board!</caption>
+          <thead>
+              <tr>
+                  <th colspan = "3">DO'S &#8681;</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for i in range(1)%}
+              <tr>
+                  <td><img src= {{do_dict[0].image}} alt = {{do_dict[0].title}} ></img><br><a href = {{do_dict[0].link}}>{{do_dict[0].title}}</a></td>
+                  <td><img src= {{do_dict[1].image}} alt = {{do_dict[1].title}} ></img><br><a href = {{do_dict[1].link}}>{{do_dict[1].title}}</a></td>
+                  <td><img src= {{do_dict[2].image}} alt = {{do_dict[2].title}} ></img><br><a href = {{do_dict[2].link}}}>{{do_dict[2].title}}</a></td>
+              </tr>
+              {% endfor %}
+          </tbody>
+          <thead>
+              <tr>
+                  <th colspan = "3" >DON'TS &#8681;</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for i in range(1)%}
+              <tr>
+                  <td><img src= {{dont_dict[0].image}} alt = {{dont_dict[0].title}} ></img><br><a href = {{dont_dict[0].link}}>{{dont_dict[0].title}}</a></td>
+                  <td><img src= {{dont_dict[1].image}} alt = {{dont_dict[1].title}} ></img><br><a href = {{dont_dict[1].link}}>{{dont_dict[1].title}}</a></td>
+                  <td><img src= {{dont_dict[2].image}} alt = {{dont_dict[2].title}} ></img><br><a href = {{dont_dict[2].link}}}>{{dont_dict[2].title}}</a></td>
+              </tr>
+              {% endfor %}
+          </tbody>
+          <thead>
+              <tr>
+                  <th colspan = "3" >EVENTS &#8681;</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for i in range(1)%}
+              <tr>
+                  <td><img src= {{event_dict[0].image}} alt = {{event_dict[0].title}} ></img><br><a href = {{event_dict[0].link}}>{{event_dict[0].title}}</a></td>
+                  <td><img src= {{event_dict[1].image}} alt = {{event_dict[1].title}} ></img><br><a href = {{event_dict[1].link}}>{{event_dict[1].title}}</a></td>
+                  <td><img src= {{event_dict[2].image}} alt = {{event_dict[2].title}} ></img><br><a href = {{event_dict[2].link}}}>{{event_dict[2].title}}</a></td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+      </div>
+
+{% endblock %}
