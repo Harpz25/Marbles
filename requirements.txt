@@ -1,0 +1,17 @@
+cs50 (Harvard cs50 IDE)
+Flask
+Flask-Session
+flask-mail
+urllib.request
+urllib.parse
+python-dotenv
+googlesearch-python
+bs4 (Beautiful Soup 4)
+random
+Requests
+Werkzeug
+functools
+SQLite
+World Health Organization Quality of Life Instruments(WHOQOL-BREF)
+
+
